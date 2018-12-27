@@ -93,6 +93,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+  
     "electron-is-dev": "^1.0.1",
     "electron-log": "^2.2.17",
     "electron-updater": "^4.0.4",
@@ -109,7 +110,6 @@
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
     "electron": "^3.0.13",
-    "electron-builder": "^20.36.2",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",

@@ -1,0 +1,125 @@
+{
+  "name": "TestingWhiz",
+  "version": "0.2.5",
+  "description": "Testing Whiz Application",
+  "license": "MIT",
+  "author": "Shailesh",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:UmeshVyas/electron-testingwhiz.git"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build:prod": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "build:linux": "build --linux dir",
+    "e2e": "ng e2e",
+    "electron": "electron .",
+    "electron-build": "npm run build:prod && electron .",
+    "pack": "electron-builder --dir",
+    "dist": "npm run build:prod && electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "build",
+    "win-32": "npm run build:prod && electron-packager . --platform=win32",
+    "mac-os": "npm run build:prod && electron-packager . --platform=darwin",
+    "linux-os": "npm run build:prod && electron-packager . --platform=linux",
+    "windows": "npm run build:prod && electron-packager . testing-whiz-app --overwrite --platform=win32 --arch=ia32 --icon=src/assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='TestingWhiz' --asar=true",
+    "mac": "npm run build:prod && electron-packager . testing-whiz-app --overwrite --platform=darwin --arch=x64 --icon=src/assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "linux": "npm run build:prod && electron-packager . testing-whiz-app --overwrite --platform=linux --arch=x64 --icon=src/assets/icons/png/icon.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='TestingWhiz'"
+  },
+  "private": true,
+  "build": {
+    "appId": "com.sp.test",
+    "productName": "TestingWhiz",
+    "copyright": "Copyright © year TestingWhiz",
+    "publish": [
+      {
+        "provider": "github"
+      }
+    ],
+    "files": [
+      "**/*",
+      "dist/**/*"
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "dist"
+    },
+    "asar": true,
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": [
+        "NSIS"
+      ],
+      "verifyUpdateCodeSignature": false
+    }
+  },
+  "dependencies": {
+    "@angular/animations": "^5.2.0",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "core-js": "^2.4.1",
+    "electron-is-dev": "^1.0.1",
+    "electron-log": "^2.2.17",
+    "electron-updater": "^4.0.4",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+    "@angular-devkit/core": "0.0.27",
+    "@angular/cli": "1.6.0",
+    "@angular/compiler-cli": "^5.2.0",
+    "@angular/language-service": "^5.2.0",
+    "@types/jasmine": "~2.8.3",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "~6.0.60",
+    "codelyzer": "^4.0.1",
+    "electron": "^3.0.13",
+    "electron-builder": "^20.36.2",
+    "jasmine-core": "~2.8.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~2.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "^5.4.2",
+    "ts-node": "~4.1.0",
+    "tslint": "~5.9.1",
+    "typescript": "~2.5.3"
+  }
+}

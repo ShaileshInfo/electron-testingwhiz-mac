@@ -1,0 +1,36 @@
+
+
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}! 
+  </h1>
+
+  Test here!
+   <form name="form" (ngSubmit)="sum()" #f="ngForm" novalidate class="form-horizontal"> 
+   
+
+     <div class="col-sm-4">
+       <input type="text" name="value1" [(ngModel)]="model.value1" #value1="ngModel" required  class="form-control" id="value1" placeholder="Enter value">
+        <div *ngIf="(f.submitted && !value1.valid) || (f.touched && !value1.valid)" class="help-block">
+          Value1 is required
+        </div>
+      </div>
+<br/>
+      <div class="col-sm-4">
+       <input type="text" name="value2" [(ngModel)]="model.value2" #value2="ngModel" required  class="form-control" id="value2" placeholder="Enter value">
+        <div *ngIf="(f.submitted && !value2.valid) || (f.touched && !value2.valid)" class="help-block">
+          value2 is required
+        </div>
+      </div>
+<br/>
+      <div class="box-footer clearfix text-center">
+         <button type="submit" class="btn btn-sm btn-info btn-flat">Click</button>       
+      </div>
+      </form>
+<br/>
+     
+<img src="assets/icons/mantis.png" alt="Image not display"/>      <span *ngIf="this.result > 0"> Result: {{this.result}} </span>
+</div>
+

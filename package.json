@@ -1,6 +1,6 @@
 {
   "name": "TestingWhiz",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Testing Whiz Application",
   "license": "MIT",
   "author": "Shailesh",
@@ -54,7 +54,8 @@
       "target": [
         "dmg",
         "zip"
-      ]
+      ],
+      "identity":null
     },
     "linux": {
       "target": [

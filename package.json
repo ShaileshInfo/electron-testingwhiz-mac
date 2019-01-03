@@ -4,10 +4,11 @@
   "description": "Testing Whiz Application",
   "license": "MIT",
   "author": "Shailesh",
+  "email": "umesh_vyas44@hotmail.com",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:UmeshVyas/electron-testingwhiz.git"
+    "url": "git@github.com:UmeshVyas/electron-testingwhiz-mac.git"
   },
   "scripts": {
     "ng": "ng",
@@ -55,20 +56,6 @@
         "zip"
       ]
     },
-    "dmg": {
-      "contents": [
-        {
-          "x": 110,
-          "y": 150
-        },
-        {
-          "x": 240,
-          "y": 150,
-          "type": "link",
-          "path": "/Applications"
-        }
-      ]
-    },
     "linux": {
       "target": [
         "AppImage",
@@ -93,7 +80,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
-  
+    "electron-builder": "^20.38.4",
     "electron-is-dev": "^1.0.1",
     "electron-log": "^2.2.17",
     "electron-updater": "^4.0.4",
@@ -102,7 +89,7 @@
   },
   "devDependencies": {
     "@angular-devkit/core": "0.0.27",
-    "@angular/cli": "1.6.0",
+    "@angular/cli": "^1.6.0",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",

@@ -119,7 +119,7 @@ autoUpdater.on('error', (ev, err) => {
 })
 autoUpdater.on('download-progress', (ev, progressObj) => {
   //sendStatusToWindow('Download progress...');
-  win.webContents.send('download-progress', progressObj.percent)
+  win.webContents.send('download-progress')
 })
 // autoUpdater.on('update-downloaded', (ev, info) => {
 //   sendStatusToWindow('Update downloaded; will install in 5 seconds');

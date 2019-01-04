@@ -1,6 +1,6 @@
 {
   "name": "TestingWhiz",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Testing Whiz Application",
   "license": "MIT",
   "author": "Shailesh",
@@ -55,7 +55,7 @@
         "dmg",
         "zip"
       ],
-      "identity":null
+      "identity":"iPhone Developer: gunvant.goswami@cygnetinfotech.com (2H426CX332)"
     },
     "linux": {
       "target": [
